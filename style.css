@@ -1,0 +1,38 @@
+body {
+  background-color: #FFCCFF;
+  font-family: Arial, sans-serif;
+  color: #191970;
+  text-align: center;
+  padding: 20px;
+}
+
+.hidden { display: none; }
+
+.color-text { 
+  display: inline-block; 
+  margin: 0 1px; 
+}
+
+input, select, button {
+  padding: 8px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  cursor: pointer;
+  background-color: #FF99CC;
+  color: white;
+  border: none;
+}
+
+#error {
+  color: red;
+}
+
+#output {
+  margin-top: 20px;
+  font-weight: bold;
+}
