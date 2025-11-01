@@ -16,7 +16,7 @@ function login() {
     const pass = document.getElementById("password").value;
     const msg = document.getElementById("loginMsg");
 
-    if (user === "sasya" && pass === "007008") {
+    if (user === "Kami" && pass === "007008") {
         msg.style.color = "#baffc9";
         msg.textContent = "Login berhasil! 🌸";
         showLoading();
@@ -46,6 +46,6 @@ function showLoading() {
         fotoContainer.classList.remove("hidden");
         setTimeout(() => fotoContainer.classList.add("show"), 100);
 
-        textElem.innerHTML = "Selamat Datang di Dunia Fisika Menyenangkan! ⚡";
+        textElem.innerHTML = "Menghitung Fisika Dengan Menyenangkan!!";
     }, 3500);
 }
