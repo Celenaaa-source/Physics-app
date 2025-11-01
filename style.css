@@ -1,38 +1,113 @@
 body {
-  background-color: #FFCCFF;
-  font-family: Arial, sans-serif;
-  color: #191970;
-  text-align: center;
-  padding: 20px;
+    background: linear-gradient(135deg, #ffb6c1, #c1e1ff, #baffc9);
+    background-size: 300% 300%;
+    animation: gradientMove 10s ease infinite;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    margin: 0;
 }
 
-.hidden { display: none; }
-
-.color-text { 
-  display: inline-block; 
-  margin: 0 1px; 
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-input, select, button {
-  padding: 8px;
-  margin: 5px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+.container {
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 25px rgba(255,255,255,0.2);
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: white;
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff66b2, 0 0 30px #ff66b2;
+    margin-bottom: 20px;
+    min-height: 50px;
+}
+
+input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 200px;
+    text-align: center;
+    outline: none;
+    box-shadow: 0 0 10px #fff;
 }
 
 button {
-  cursor: pointer;
-  background-color: #FF99CC;
-  color: white;
-  border: none;
+    background-color: #ff80bf;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 0 15px #ffb6c1;
+    transition: 0.3s;
 }
 
-#error {
-  color: red;
+button:hover {
+    background-color: #ff66b2;
+    box-shadow: 0 0 25px #ff66b2;
 }
 
-#output {
-  margin-top: 20px;
-  font-weight: bold;
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.menu-list li {
+    background: rgba(255,255,255,0.15);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+    text-shadow: 0 0 10px #fff;
+}
+
+.menu-list li:hover {
+    background: rgba(255,255,255,0.25);
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Foto profil */
+.foto-profil {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    box-shadow: 0 0 20px #ff99cc;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px #ff99cc; }
+    to { box-shadow: 0 0 25px #ff66b2; }
+}
+
+/* Fade-in foto */
+.foto-container {
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+.foto-container.show {
+    opacity: 1;
 }
