@@ -1,41 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fisika Menyenangkan</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Fisika Menyenangkan</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <h1 id="animatedText"></h1>
+        <div id="loginDiv">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p id="loginMsg"></p>
+        </div>
 
-<h1 id="animatedText"></h1>
+        <div id="menuDiv" class="hidden">
+            <!-- Foto + Teks muncul setelah login -->
+            <div class="foto-container hidden" id="fotoContainer">
+                <img src="foto-kamu.jpg" alt="Foto Kamu" class="foto-profil">
+                <h2>Silakan pilih menu, Sasya!</h2>
+            </div>
 
-<div id="loginDiv">
-  <h2>Login</h2>
-  <input type="text" id="username" placeholder="Username"><br>
-  <input type="password" id="password" placeholder="Password"><br>
-  <button onclick="login()">Login</button>
-  <p id="loginMsg" class="error"></p>
-</div>
-
-<div id="menuDiv" class="hidden">
-  <h2>Silahkan Pilih Menu</h2>
-  <select id="menuSelect">
-    <option value="glb">Menghitung GLB</option>
-    <option value="glbb">Menghitung GLBB</option>
-    <option value="gva">Menghitung GVA</option>
-    <option value="gvb">Menghitung GVB</option>
-  </select>
-  <button onclick="showForm()">Pilih</button>
-</div>
-
-<div id="formDiv" class="hidden">
-  <div id="formFields"></div>
-  <button onclick="calculate()">Hitung</button>
-  <div id="output"></div>
-  <button onclick="backToMenu()">Kembali ke Menu</button>
-</div>
-
-<script src="script.js"></script>
+            <ul class="menu-list">
+                <li>Menghitung GLB</li>
+                <li>Menghitung GLBB</li>
+                <li>Menghitung GVA</li>
+                <li>Menghitung GVB</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
